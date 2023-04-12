@@ -1,0 +1,13 @@
+/* HEADER PAGE PRINCIPALE */
+
+.header {
+  background-color: white;
+  padding: 15px 0 8px 0;
+  box-shadow: 0 0 8px 0 $grey;
+  text-align: center;
+  &__logo {
+    justify-content: center;
+    font-family: "Shrikhand";
+  }
+}
+

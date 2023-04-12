@@ -1,0 +1,112 @@
+/* SECTIONS DE LA PAGE PRINCIPALE */
+
+.section {
+  &__title {
+    padding: 28px 0px 8px 26px;
+    font-weight: 700;
+    font-size: 22px;
+  }
+  &--fonctionnement {
+    background-color: white;
+    padding-bottom: 18px;
+    .step {
+      background-color: $background;
+      display: flex;
+      justify-content: flex-start;
+      box-shadow: 0 5px 16px #0000002e;
+      margin: 5% 10%;
+      border-radius: 16px;
+      height: 62px;
+      position: relative;
+
+      &__number {
+        padding: 1px 5px;
+        color: white;
+        background-color: #9356dc;
+        border-radius: 10px;
+        height: 17px;
+        position: absolute;
+        left: -8px;
+      }
+      &__icon {
+        color: grey;
+        font-size: 16px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+        &--purple {
+          color: $primaire;
+        }
+      }
+      &__content {
+        align-items: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        display: flex;
+      }
+      &__text {
+        font-weight: 600;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &--restaurants {
+    background-color: $background;
+    padding-bottom: 45px;
+    .resto {
+      border-radius: 15px;
+      width: 88%;
+      height: 205px;
+      box-shadow: 0 5px 16px #0000002e;
+      position: relative;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 12px;
+      margin-bottom: 20px;
+
+      &__image img {
+        width: 100%;
+        height: 134px;
+        border-radius: 14px 14px 0px 0px;
+        object-fit: cover;
+      }
+      &__content {
+        display: grid;
+        padding: 5px 181px 0px 0px;
+        color: black;
+        padding: 10px 0px 0px 13px;
+      }
+      &__title {
+        font-weight: 800;
+      }
+      &__subtitle {
+        padding: 8px 22px 0px 0px;
+      }
+      &__new {
+        position: absolute;
+        top: 13px;
+        right: 8px;
+        background: $tertiaire;
+        padding: 4px 13px;
+        font-size: 14px;
+        color: $greenfont;
+        font-weight: 800;
+      }
+      &__heart {
+        position: absolute;
+        right: 28px;
+        bottom: 20px;
+        font-size: 25px;
+
+        &:hover .fa-heart-animated {
+          font-size: 25px;
+        }
+      }
+      }
+    }
+  }
+

@@ -1,0 +1,21 @@
+/* SUBHEADER DE LA PAGE DE DETAIL */
+
+.subheader{
+ 
+  display: flex;
+  justify-content: center;
+  background-color: $lightgrey;
+  margin-top: 4px;
+
+  &__iconemap{
+      margin: 10px 10px 10px 0px;
+  }
+
+      &__content{
+          margin: 10px 10px 5px 0px;
+       a{
+          color: black;
+      }
+  
+      }
+}
