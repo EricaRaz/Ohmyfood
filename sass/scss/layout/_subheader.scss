@@ -1,4 +1,4 @@
-/* SUBHEADER DE LA PAGE DE DETAIL */
+/* subheader */
 
 .subheader{
  
@@ -6,16 +6,23 @@
   justify-content: center;
   background-color: $lightgrey;
   margin-top: 4px;
-
+  
+  /* subheader des menus */
+  &__image{
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+  } /* subheader des menus */
+  
   &__iconemap{
       margin: 10px 10px 10px 0px;
   }
 
-      &__content{
-          margin: 10px 10px 5px 0px;
-       a{
-          color: black;
+  &__content{
+    margin: 10px 10px 5px 0px;
+      a{
+        color: black;
       }
   
-      }
+  }
 }
