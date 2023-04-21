@@ -15,7 +15,88 @@ a {
   color: black;
 }
 
-/* Couleurs */ /* BOUTON */
+/* Couleurs */ /* bouton */
+@keyframes flash {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* menu */
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.anim-1 {
+  animation-delay: 0.1s;
+}
+.anim-2 {
+  animation-delay: 0.2s;
+}
+.anim-3 {
+  animation-delay: 0.3s;
+}
+.anim-4 {
+  animation-delay: 0.4s;
+}
+.anim-5 {
+  animation-delay: 0.5s;
+}
+.anim-6 {
+  animation-delay: 0.6s;
+}
+.anim-7 {
+  animation-delay: 0.7s;
+}
+.anim-8 {
+  animation-delay: 0.8s;
+}
+.anim-9 {
+  animation-delay: 0.9s;
+}
+.anim-10 {
+  animation-delay: 1s;
+}
+
+/* coeur */
+.fa-heart-animated {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  font-size: 0px;
+  color: #9356DC;
+  font-weight: bold;
+  transition-duration: 0.3s;
+}
+
+/* loader */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* page menu vers accueil */
+@keyframes off {
+  from {
+    opacity: 90%;
+  }
+  to {
+    display: none;
+    opacity: 0%;
+    z-index: -1;
+  }
+}
+/* BOUTON */
 .btn {
   background-image: linear-gradient(135deg, #FF79DA, #9356DC);
   border-radius: 20px;
@@ -27,6 +108,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   margin-top: 40px;
+  transition: transform 0.4s;
 }
 .btn__text {
   color: white;
@@ -34,15 +116,13 @@ a {
 }
 .btn:hover {
   cursor: pointer;
-  opacity: 1;
-  animation: flash 1.5s;
-  box-shadow: 5px 15px 21px rgba(0, 0, 0, 0.5019607843);
+  transform: scale(1.1);
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5019607843);
 }
 
 .footer {
   background-color: #353535;
   padding: 18px 0px 18px 24px;
-  margin-top: 10px;
 }
 .footer a {
   color: white;
@@ -101,19 +181,18 @@ a {
 .hero {
   background: #F7F7F7;
   margin-top: 0px;
-  margin: -16px 0 0 0;
+  margin-top: -16px;
   padding-bottom: 40px;
 }
 .hero__content {
   color: black;
-  font-family: "Roboto";
 }
 .hero__title {
   justify-content: center;
   text-align: center;
   margin: 15px 0px 10px 0px;
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 700;
   padding-top: 22px;
 }
 .hero__subtitle {
@@ -144,7 +223,7 @@ a {
 .section--fonctionnement .step__number {
   padding: 1px 5px;
   color: white;
-  background-color: #9356dc;
+  background-color: #9356DC;
   border-radius: 10px;
   height: 17px;
   position: absolute;
@@ -219,7 +298,7 @@ a {
 .section--restaurants .resto__heart {
   position: absolute;
   right: 28px;
-  bottom: 20px;
+  bottom: 22px;
   font-size: 25px;
 }
 .section--restaurants .resto__heart:hover .fa-heart-animated {
@@ -253,7 +332,7 @@ a {
 /* Page de menu */
 .choice--restau {
   padding-bottom: 40px;
-  background-color: whitesmoke;
+  background-color: #F7F7F7;
   border-radius: 30px 30px 0px 0px;
 }
 .choice--restau__image {
@@ -266,7 +345,7 @@ a {
   padding: 20px 0px 20px 0px;
 }
 .choice--restau__content__title {
-  font-size: 30px;
+  font-size: 25px;
   font-family: "shrikhand";
   padding: 0px 44px 0px 0px;
 }
@@ -295,7 +374,7 @@ a {
   width: 11%;
 }
 .card__element {
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: white;
   width: 92%;
   display: block;
@@ -313,8 +392,8 @@ a {
   display: flex;
 }
 .card__contents:hover .card__check {
-  width: 40px;
-  border-radius: 0px 10px 10px 0px;
+  width: 50px;
+  border-radius: 0px 20px 20px 0px;
 }
 .card__contents:hover .card__contents__left {
   width: calc(100% - 40px);
@@ -357,6 +436,47 @@ a {
   align-items: center;
   overflow: hidden;
   transition: all 0.3s ease;
+}
+.card .fa-check-circle {
+  border-radius: 15px;
+  border: none;
+  background-color: white;
+  color: #99E2D0;
+}
+
+/*loader page de menu*/
+.bloc {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  animation: off;
+  animation-duration: 3s;
+  transition: opacity 3s ease-in-out;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+}
+.bloc__loader {
+  align-items: center;
+  justify-content: center;
+  border: dotted 17px #99E2D0;
+  border-radius: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin-top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  border-top-color: #008766;
+  animation: rotate linear infinite;
+  animation-duration: 3s;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  margin-top: -30px;
 }
 
 /*# sourceMappingURL=style.css.map */
