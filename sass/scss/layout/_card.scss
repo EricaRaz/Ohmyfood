@@ -12,7 +12,7 @@
 }
   
   &__element {
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: white;
     width: 92%;
     display: block;
@@ -29,9 +29,10 @@
   
   &__contents {
     display: flex;
+    
     &:hover .card__check {
-      width: 40px;
-      border-radius: 0px 10px 10px 0px;
+      width: 50px;
+      border-radius: 0px 20px 20px 0px;
     }
     &:hover .card__contents__left {
       width: calc(100% - 40px);
@@ -47,6 +48,7 @@
       position: relative;
       box-sizing: border-box;
     }
+
     &__inline {
       display: flex;
       padding-top: 5px;
@@ -81,5 +83,11 @@
     overflow: hidden;
     transition: all 0.3s ease;
   }
+.fa-check-circle{
+  border-radius: 15px;
+  border: none;
+  background-color: white;
+  color: $tertiaire;
+}
 }
 
