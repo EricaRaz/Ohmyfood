@@ -66,3 +66,27 @@
   transition-duration: 0.3s;
 }
 
+/* loader */
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* page menu vers accueil */
+
+@keyframes off{
+  from {
+  
+    opacity: 90%;
+}
+to {
+  display: none;
+  opacity: 0%;
+  z-index: -1;
+}
+}
