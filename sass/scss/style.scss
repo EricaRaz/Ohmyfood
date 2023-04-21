@@ -1,5 +1,6 @@
 @import "./base/resets";
 @import "./utils/variables";
+@import "./utils/animations";
 @import "./components/buttons";
 @import "./layout/footer";
 @import "./layout/header";
@@ -8,4 +9,6 @@
 @import "./layout/subheader";
 @import "./layout/choice";
 @import "./layout/card";
+@import "./layout/loader";
+@import "./layout/container";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Shrikhand&display=swap');
