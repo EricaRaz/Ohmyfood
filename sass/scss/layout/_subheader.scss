@@ -1,28 +1,26 @@
 /* subheader */
 
-.subheader{
- 
+.subheader {
+  margin: 4px 0;
+  padding: 15px 0;
   display: flex;
   justify-content: center;
+  column-gap: 20px;
   background-color: $lightgrey;
-  margin-top: 4px;
+  #localisation{
+    border: none;
+    width: 100px;
+    background-color: $lightgrey;
+    outline: none;
+  }
+
   
   /* subheader des menus */
   &__image{
     width: 100%;
-    height: 30vh;
+    height: 270px;
+    margin-top: -15px;
     object-fit: cover;
   } /* subheader des menus */
   
-  &__iconemap{
-      margin: 10px 10px 10px 0px;
-  }
-
-  &__content{
-    margin: 10px 10px 5px 0px;
-      a{
-        color: black;
-      }
-  
-  }
 }
