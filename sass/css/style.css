@@ -438,10 +438,8 @@ a {
   transition: all 0.3s ease;
 }
 .card .fa-check-circle {
-  border-radius: 15px;
-  border: none;
-  background-color: white;
-  color: #99E2D0;
+  background-color: #99E2D0;
+  color: white;
 }
 
 /*loader page de menu*/
