@@ -22,6 +22,7 @@
       }
       &__heart {
         position: relative;
+        top: 5px;
         height: 21px;
       }
     }
@@ -31,9 +32,11 @@
 #heart--icon {
   position: relative;
   height: 21px;
+  font-weight: 300;
   cursor: pointer;
   &:hover .fa-heart-animated {
-    font-size: 20px;
+    bottom: -2px;
+    font-size: 21px;
   }
 }
-  
+

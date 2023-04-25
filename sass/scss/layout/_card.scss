@@ -3,13 +3,13 @@
     margin-bottom: 50px;
     
     &__title {
-    font-weight: 400;
-    margin: 24px 0px 8px 18px;
+    font-weight: 300;
+    margin: 24px 0px 8px 15px;
     border-bottom: 3px solid #99e2d0;
     padding-bottom: 6px;
-    width: 11%;
+    width: 50px;
     }
-}
+  }
   
   &__element {
     border-radius: 20px;
@@ -31,7 +31,7 @@
     display: flex;
     
     &:hover .card__check {
-      width: 50px;
+      width: 60px;
       border-radius: 0px 20px 20px 0px;
     }
     &:hover .card__contents__left {
@@ -40,6 +40,9 @@
 
     &__title {
       font-weight: 700;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
 
     &__left {
@@ -58,6 +61,7 @@
         white-space: nowrap;
         overflow: hidden;
         width: 82%;
+        font-weight: 300;
       }
       &__price {
         position: absolute;
@@ -67,11 +71,12 @@
           font-weight: bold;
         } 
       }
-      
     }
   }
 
   &__check {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     height: 100%;
     right: 0px;
     top: 0;
@@ -86,6 +91,32 @@
 .fa-check-circle{
   background-color: $tertiaire;
   color: white;
-}
+  font-size: 20px;
+  }
 }
 
+@media (min-width: 768px) and (max-width: 1023px){
+  .card{
+    width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    &__menu{
+        &__title{
+        margin: 24px 0 8px 25px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1600px){
+  .card{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    &__menu{
+      &__title{
+        margin: 24px 0px 8px 40px;
+      }
+    }
+  }
+}
