@@ -8,6 +8,7 @@
   &__logo {
     justify-content: center;
     font-family: "Shrikhand";
+    font-size: 30px;
   }
 }
 
@@ -24,14 +25,14 @@
   font-size: 19px;
   position: absolute;
   left: 20px;
-  top: 20px;
+  top: 25px;
   max-width: 1440px;
 
-}
+  }
 &__title {
   a {
     font-family: "Shrikhand";
-    font-size: 28px;
+    font-size: 35px;
+    }
   }
-}
 }
