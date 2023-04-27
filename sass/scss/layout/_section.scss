@@ -1,4 +1,7 @@
-/* SECTIONS DE LA PAGE PRINCIPALE */
+/* Page pricincipale */
+
+// section fonctionnement et restaurants
+
 .section {
   &__title {
     padding: 40px 0px 8px 26px;
@@ -96,6 +99,9 @@
         color: $greenfont;
         font-weight: 700;
       }
+
+      /* coeur */
+
       &__heart {
         position: absolute;
         right: 28px;
@@ -104,7 +110,7 @@
 
         &:hover .fa-heart-animated {
           bottom: 2px;
-          font-size: 24px;
+          font-size: 1.5rem;
         }
       }
     }
@@ -113,7 +119,7 @@
 
 // responsive
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .section {
     padding-left: 40px;
     padding-right: 40px;
@@ -140,24 +146,26 @@
     }
 }
 
-@media (min-width: 1024px) and (max-width: 1600px) {
+@media screen and (min-width: 1024px) {
   .section {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
     .transform0{
       display: flex;
+      margin-left: 5px;
+      margin-right: 18px;
     }
     &__title {
-      padding: 35px 22px 7px 22px;
+      padding: 35px 22px 7px 31px;
       align-items: flex-start;
     }
     .step {
-      width: 29%;
+      width: 28%;
       display: flex;
       margin: 20px auto 20px auto;
       white-space: nowrap;
       &__icon{
-        width: 40px;
+        width: 50px;
         margin-left: 15px;
       &__text{
         font-size: 12px;
@@ -170,26 +178,22 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .section {
-    padding-left: 80px;
-    padding-right: 80px;
     &--restaurants {
       .transform {
         display: flex;
         flex-wrap: wrap;
       }
       .resto {
-        width: calc(50% - 50px);
+        width: calc(60% - 100px);
       }
     }
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1600px) {
+@media screen and (min-width: 1024px) {
   .section {
-    padding-left: 150px;
-    padding-right: 150px;
     &--restaurants {
       .transform {
         display: flex;
@@ -197,7 +201,7 @@
       }
       .resto {
         box-sizing: border-box;
-        width: calc(50% - 50px);
+        width: calc(50% - 70px);
         height: 240px;
         &__image img {
           width: 100%;

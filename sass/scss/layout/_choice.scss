@@ -1,6 +1,6 @@
 /* Page de menu */
 
-
+// choix des restaurants (titre) + coeur
 .choice {
   &--restau {
     padding-bottom: 40px;
@@ -36,7 +36,7 @@
   cursor: pointer;
   &:hover .fa-heart-animated {
     bottom: -2px;
-    font-size: 21px;
+    font-size: 1.4rem;
   }
 }
 
