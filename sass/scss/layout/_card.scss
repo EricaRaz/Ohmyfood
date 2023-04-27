@@ -1,7 +1,12 @@
+/* Page de menu */
+
+// les cartes (entrées, plats, desserts)
+
 .card {
+  // section card
   &__menu {
     margin-bottom: 50px;
-    
+    // titre ENTREES PLATS DESSERTS
     &__title {
     font-weight: 300;
     margin: 24px 0px 8px 15px;
@@ -10,7 +15,7 @@
     width: 50px;
     }
   }
-  
+  // article element + anim
   &__element {
     border-radius: 20px;
     background-color: white;
@@ -94,6 +99,8 @@
   font-size: 20px;
   }
 }
+
+// responsive
 
 @media (min-width: 768px) and (max-width: 1023px){
   .card{
