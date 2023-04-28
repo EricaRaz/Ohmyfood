@@ -1,0 +1,131 @@
+/* Page de menu */
+
+// les cartes (entrées, plats, desserts)
+
+.card {
+  // section card
+  &__menu {
+    margin-bottom: 50px;
+    // titre ENTREES PLATS DESSERTS
+    &__title {
+    font-weight: 300;
+    margin: 24px 0px 8px 15px;
+    border-bottom: 3px solid #99e2d0;
+    padding-bottom: 6px;
+    width: 50px;
+    }
+  }
+  // article element + anim
+  &__element {
+    border-radius: 20px;
+    background-color: white;
+    width: 92%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+    box-shadow: 0 5px 16px #0000002e;
+    position: relative;
+    animation-duration: 1s;
+    animation-name: appear;
+    transform: scale(0);
+    animation-fill-mode: both;
+  }
+
+  
+  
+  &__contents {
+    display: flex;
+    
+    &:hover .card__check {
+      width: 60px;
+      border-radius: 0px 20px 20px 0px;
+    }
+    &:hover .card__contents__left {
+      width: calc(100% - 40px);
+    }
+
+    &__title {
+      font-weight: 700;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    &__left {
+      width: 100%;
+      padding: 0.8em;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    &__inline {
+      display: flex;
+      padding-top: 5px;
+
+      &__subtitle {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 82%;
+        font-weight: 300;
+      }
+      &__price {
+        position: absolute;
+        right: 5%;
+        &--weight{
+          font-style: normal;
+          font-weight: bold;
+        } 
+      }
+    }
+  }
+
+  &__check {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 100%;
+    right: 0px;
+    top: 0;
+    width: 0px;
+    background: #99E2D0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+.fa-check-circle{
+  background-color: $tertiaire;
+  color: white;
+  font-size: 20px;
+  }
+}
+
+// responsive
+
+@media (min-width: 768px) and (max-width: 1024px){
+  .card{
+    width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    &__menu{
+        &__title{
+        margin: 24px 0 8px 25px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .card{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    &__menu{
+      &__title{
+        margin: 24px 0px 8px 40px;
+      }
+    }
+  }
+}

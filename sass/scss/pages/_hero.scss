@@ -1,0 +1,38 @@
+/* page principale */
+
+.hero {
+  background: $background;
+  margin-top: 0px;
+  margin-top: -16px;
+  padding-bottom: 40px;
+  &__content {
+    color: black;
+  }
+  &__title {
+    justify-content: center;
+    text-align: center;
+    margin: 15px 30px 10px 30px;
+    font-size: 25px;
+    font-weight: 700;
+    padding-top: 35px;
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin: 0px 15px 10px;
+    font-weight: 300;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .hero {
+    &__title {
+      justify-content: center;
+      text-align: center;
+      margin: 15px 20px 20px 20px;
+      font-size: 40px;
+      font-weight: 700;
+      padding-top: 35px;
+    }
+  }
+}
