@@ -1,7 +1,7 @@
 /* bouton */
 
 .btn{
-    @include background ;
+    @include background;
     border-radius: 25px;
     height: 45px;
     border: none;
@@ -21,7 +21,8 @@
     
     &:hover{
       cursor: pointer;
-      transform: scale(1.05);
+      transform: scale(1.02);
+      opacity: 0.8;
       box-shadow: 5px 10px 20px #00000080;
     }
 }
