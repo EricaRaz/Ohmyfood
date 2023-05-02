@@ -156,8 +156,9 @@ a {
 @media screen and (min-width: 768px) {
   .footer {
     display: flex;
-    column-gap: 10px;
-    padding-top: 55px;
+    flex-direction: row-reverse;
+    column-gap: 22px;
+    padding: 40px 20px 0 0;
   }
   .footer__content {
     display: flex;
@@ -176,7 +177,6 @@ a {
   }
   .footer .responsive {
     display: flex;
-    padding-left: 20px;
     column-gap: 20px;
   }
   .footer .footer a {
