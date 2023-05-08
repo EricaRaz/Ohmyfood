@@ -4,6 +4,7 @@
 *::before {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -15,10 +16,10 @@ a {
   color: black;
 }
 
-/* Couleurs */
 /* bouton */
+/* textForm dans card */
 /* coeur */
-/* menu */
+/* Couleurs */ /* menu */
 @keyframes appear {
   0% {
     transform: scale(0);
@@ -67,20 +68,15 @@ a {
   animation-delay: 1s;
 }
 
-/* coeur */
-.fa-heart-animated {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-  font-size: 0;
-  background: linear-gradient(#9356DC 0%, #FF79DA 60%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  font-weight: bold;
-  transition-duration: 0.3s;
+@keyframes fill {
+  0% {
+    transform-origin: bottom;
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-
 /* loader */
 @keyframes rotate {
   from {
@@ -90,13 +86,11 @@ a {
     transform: rotate(360deg);
   }
 }
-/* page menu vers accueil */
 @keyframes off {
   from {
     opacity: 90%;
   }
   to {
-    display: none;
     opacity: 0%;
     z-index: -1;
   }
@@ -269,9 +263,8 @@ a {
 .bloc__loader {
   align-items: center;
   justify-content: center;
-  border: dotted 17px #99E2D0;
+  border: solid 20px #99E2D0;
   border-radius: 50%;
-  z-index: 1;
   width: 150px;
   height: 150px;
   margin-top: 20%;
@@ -327,9 +320,6 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  .subheader {
-    margin: 0;
-  }
   .subheader__image {
     height: 350px;
   }
@@ -341,7 +331,7 @@ a {
 .card__menu__title {
   font-weight: 300;
   margin: 24px 0px 8px 15px;
-  border-bottom: 3px solid #99e2d0;
+  border-bottom: 3px solid #99E2D0;
   padding-bottom: 6px;
   width: 50px;
 }
@@ -359,16 +349,19 @@ a {
   animation-name: appear;
   transform: scale(0);
   animation-fill-mode: both;
+  overflow: hidden;
 }
 .card__contents {
   display: flex;
 }
 .card__contents:hover .card__check {
   width: 60px;
-  border-radius: 0px 20px 20px 0px;
 }
-.card__contents:hover .card__contents__left {
-  width: calc(100% - 40px);
+.card__contents__left {
+  width: 100%;
+  min-width: 0;
+  padding: 0.8em;
+  position: relative;
 }
 .card__contents__title {
   font-weight: 700;
@@ -376,22 +369,16 @@ a {
   white-space: nowrap;
   overflow: hidden;
 }
-.card__contents__left {
-  width: 100%;
-  padding: 0.8em;
-  position: relative;
-  box-sizing: border-box;
-}
 .card__contents__inline {
   display: flex;
   padding-top: 5px;
 }
 .card__contents__inline__subtitle {
+  width: 82%;
+  font-weight: 300;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 82%;
-  font-weight: 300;
 }
 .card__contents__inline__price {
   position: absolute;
@@ -402,21 +389,16 @@ a {
   font-weight: bold;
 }
 .card__check {
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
   height: 100%;
-  right: 0px;
-  top: 0;
-  width: 0px;
+  width: 0;
   background: #99E2D0;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: 0.3s ease-in-out;
 }
 .card .fa-check-circle {
-  background-color: #99E2D0;
   color: white;
   font-size: 20px;
 }
@@ -466,16 +448,29 @@ a {
   top: 5px;
   height: 21px;
 }
-
-#heart--icon {
-  position: relative;
-  height: 21px;
-  font-weight: 300;
+.choice--restau .heartFavorite {
+  width: 2rem;
+}
+.choice--restau .heartFavorite input {
+  display: none;
+}
+.choice--restau .heartFavorite .iconChange {
+  position: absolute;
+  font-size: 24px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: thin;
   cursor: pointer;
 }
-#heart--icon:hover .fa-heart-animated {
-  bottom: -2px;
-  font-size: 1.4rem;
+.choice--restau .heartFavorite input:checked + .iconChange .fa-heart::after {
+  content: "\f004";
+  position: absolute;
+  left: 0;
+  background: -webkit-linear-gradient(#9356DC 0%, #FF79DA 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: initial;
+  animation: fill 0.3s;
 }
 
 /* page principale */
@@ -513,6 +508,9 @@ a {
   }
 }
 /* Page pricincipale */
+.section {
+  /* coeur */
+}
 .section__title {
   padding: 40px 0px 8px 26px;
   font-weight: 700;
@@ -533,10 +531,10 @@ a {
   position: relative;
 }
 .section--fonctionnement .step__number {
-  padding: 1px 5px;
+  padding: 1px 6px 20px 6px;
   color: white;
   background-color: #9356DC;
-  border-radius: 10px;
+  border-radius: 50px;
   height: 17px;
   position: absolute;
   left: -8px;
@@ -578,7 +576,6 @@ a {
   margin-right: auto;
   margin-top: 12px;
   margin-bottom: 20px;
-  /* coeur */
 }
 .section--restaurants .resto__image img {
   width: 100%;
@@ -609,15 +606,31 @@ a {
   color: #008766;
   font-weight: 700;
 }
-.section--restaurants .resto__heart {
+.section .heartFavorite1 {
   position: absolute;
-  right: 28px;
-  bottom: 25px;
-  font-size: 22px;
+  right: 45px;
+  bottom: 50px;
 }
-.section--restaurants .resto__heart:hover .fa-heart-animated {
-  bottom: 2px;
-  font-size: 1.5rem;
+.section .heartFavorite1 input {
+  display: none;
+}
+.section .heartFavorite1 .iconChange {
+  position: absolute;
+  font-size: 24px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: thin;
+  cursor: pointer;
+}
+.section .heartFavorite1 input:checked + .iconChange .fa-heart::after {
+  content: "\f004";
+  position: absolute;
+  left: 0;
+  background: -webkit-linear-gradient(#9356DC 0%, #FF79DA 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: initial;
+  animation: fill 0.3s;
 }
 
 @media screen and (min-width: 768px) {
