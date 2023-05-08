@@ -2,6 +2,8 @@
 
 // section fonctionnement et restaurants
 
+// section fonctionnement
+
 .section {
   &__title {
     padding: 40px 0px 8px 26px;
@@ -22,10 +24,10 @@
       position: relative;
 
       &__number {
-        padding: 1px 5px;
+        padding: 1px 6px 20px 6px;
         color: white;
         background-color: $primaire;
-        border-radius: 10px;
+        border-radius: 50px;
         height: 17px;
         position: absolute;
         left: -8px;
@@ -54,6 +56,8 @@
       }
     }
   }
+
+  // section restaurants
 
   &--restaurants {
     background-color: $background;
@@ -99,21 +103,16 @@
         color: $greenfont;
         font-weight: 700;
       }
-
-      /* coeur */
-
-      &__heart {
-        position: absolute;
-        right: 28px;
-        bottom: 25px;
-        font-size: 22px;
-
-        &:hover .fa-heart-animated {
-          bottom: 2px;
-          font-size: 1.5rem;
-        }
-      }
     }
+  }
+   
+  /* coeur */
+
+  .heartFavorite1 {
+    position: absolute;
+    right: 45px;
+    bottom: 50px;
+    @include coeur;
   }
 }
 
