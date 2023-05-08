@@ -11,14 +11,3 @@ $grey: #353535;
 $lightgrey: #EAEAEA;
 
 
-/* bouton */
-
-@mixin background { background: linear-gradient($secondaire,$primaire)}
-
-/* coeur */
-
-@mixin coeur {
-  background: linear-gradient($primaire 0%, $secondaire 60%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-}
