@@ -1,0 +1,41 @@
+/* bouton */
+
+@mixin background { 
+  background: linear-gradient($secondaire,$primaire)
+}
+
+
+/* textForm dans card */
+  
+@mixin textForm {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+/* coeur */
+  
+@mixin coeur {
+input{
+  display: none;
+}
+.iconChange {
+  position: absolute;
+  font-size: 24px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: thin;
+  cursor: pointer;
+}
+input:checked + .iconChange .fa-heart::after {
+  content: '\f004';
+  position: absolute; 
+  left: 0;
+  background: -webkit-linear-gradient($primaire 0%, $secondaire 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: initial;
+  animation: fill 0.3s;
+  }
+}
