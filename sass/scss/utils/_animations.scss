@@ -40,18 +40,18 @@
   .anim-10{
     animation-delay: 1s;
   }
-  
-/* coeur */
-  
-.fa-heart-animated {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-  font-size: 0;
-  @include coeur;
-  font-weight: bold;
-  transition-duration: 0.3s;
+
+// Remplissage du coeur au click
+
+@keyframes fill {
+  0% {
+    transform-origin: bottom;
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* loader */
@@ -65,14 +65,11 @@
   }
 }
 
-/* page menu vers accueil */
-
 @keyframes off{
   from {
     opacity: 90%;
 }
   to {
-    display: none;
     opacity: 0%;
     z-index: -1;
   }
