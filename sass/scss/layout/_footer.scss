@@ -33,7 +33,7 @@
     display: flex;
     flex-direction: row-reverse;
     column-gap: 22px;
-    padding: 40px 20px 0 0;
+    padding: 40px 20px 12px;
     &__content {
       display: flex;
       justify-content: space-between;
@@ -63,8 +63,7 @@
   .footer{
     display: flex;
     flex-direction: row-reverse;
-    padding-top: 30px;
-    padding-right: 30px;
+    padding: 30px 30px 15px;
     column-gap: 100px;
     &__content {
       column-gap: 20px;
